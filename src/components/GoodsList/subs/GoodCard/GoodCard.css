@@ -19,8 +19,10 @@
 
 .good-card .trashIcon {
   cursor: pointer;
+  position: absolute;
   margin-left: auto;
   margin-top: 4px;
+  right: 32px;
   margin-right: 4px;
 }
 
