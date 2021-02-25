@@ -1,0 +1,44 @@
+.good-card {
+  height: 100px;
+  width: 100%;
+  background-color: #9eebcf;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  border: 1px solid black;
+}
+
+.good-card img {
+  height: 98px;
+  border-radius: 16px 0 0 16px;
+  border-right: 1px solid black;
+  width: 100px;
+  min-width: 100px;
+}
+
+.good-card .trashIcon {
+  cursor: pointer;
+  margin-left: auto;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+
+.good-card-content {
+  margin-left: 15px;
+}
+
+.good-card-content > p:nth-child(1) {
+  font-size: 21px;
+  margin-bottom: 6px;
+}
+
+.good-card-content > p:nth-child(2) {
+  word-break: break-word;
+  overflow: hidden;
+  width: 500px;
+  max-height: 50px;
+  /* max-width: 50%; */
+  white-space: pre-line;
+  text-overflow: ellipsis;
+}

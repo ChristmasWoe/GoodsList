@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import { goodsReducer } from './redux/Reducers'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const store = createStore(goodsReducer)
+
+if (localStorage.getItem("goods") == null) {
+  localStorage.setItem("goods", JSON.stringify([]))
+}
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

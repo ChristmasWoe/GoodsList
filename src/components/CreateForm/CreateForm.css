@@ -1,0 +1,44 @@
+#createForm {
+  flex-grow: 1;
+  min-width: 30%;
+  padding-top: 30px;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+}
+
+.submit {
+  position: sticky;
+  width: 200px;
+  bottom: 40px;
+  margin-top: auto;
+  margin-left: auto;
+  border: none;
+  border-radius: 18%;
+  margin-right: auto;
+  font-size: 75px;
+  clip-path: circle(25%);
+  transition: clip-path 1s;
+  color: aliceblue;
+  background-color: blue;
+  height: 100px;
+  line-height: 40px;
+}
+
+.submit::after {
+  content: "+";
+}
+
+.submit:focus {
+  outline: none;
+}
+
+.submit:hover {
+  font-size: 45px;
+  clip-path: circle(75%);
+}
+
+.submit:hover::after {
+  content: "Submit";
+}

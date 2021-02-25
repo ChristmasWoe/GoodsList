@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import GoodsList from './components/GoodsList/GoodsList';
+import CreateForm from './components/CreateForm/CreateForm';
+import ResizePanel from "react-resize-panel";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ResizePanel style={{ minWidth: "30%", maxWidth: "60%" }}
+        borderClass="customBorder"
+        handleClass="customHandle"
+        direction="e">
+        <CreateForm />
+      </ResizePanel>
+      <GoodsList />
     </div>
   );
 }
